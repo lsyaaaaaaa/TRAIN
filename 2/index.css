@@ -1,0 +1,22 @@
+a:link{
+    color: aliceblue;
+}
+a:visited {
+    color: rgb(252, 247, 249)
+} /* 已访问的链接 */
+
+a:active {
+    color: #e09ea7;
+} /* [选定的链接 */
+.move{
+    position: relative;
+	animation: mymove 5s;
+	animation-iteration-count: infinite;
+}
+@keyframes mymove{
+    from,0%{left: -100px;top: 0px;}
+    25%{left: 0px;top: 0px;}
+    50%{left: 100px;top: 0px;}
+    75%{left: 0px;top: 0px;}
+    to,100%{left: -100px;top: 0px;}
+}
