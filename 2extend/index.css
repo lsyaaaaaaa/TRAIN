@@ -40,6 +40,17 @@ a:active {
     background-color: #d6cece;
 }
 
+#container1 ul>li a{
+    text-decoration:none;
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+}
+
+#container1 ul>li a:hover{
+    background-color:#c7858e;
+}
+
 ul{
     margin:0 auto;
     padding-left: 0;
@@ -52,9 +63,7 @@ li{
     height:25%;
     text-align: center;
 }
-a{
-    text-decoration:none;
-}
+
 
 table{
     text-align: center;
