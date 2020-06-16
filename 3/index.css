@@ -1,443 +1,134 @@
-* {
-	margin: 0 auto;
-	padding: 0 auto;
-	box-sizing: border-box;
-}
-
-body{
-
-	display: flex;
-	justify-content: center;
-	align-content: center;
-}
-
-.big{
-	position: relative;
-	max-width: 1300px;
-	display: flex;
-    justify-content: center;
-	align-content: center;
-	flex-wrap: wrap;
-}
-
-.big .wragger{
-	max-width: 1200px;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-wrap: wrap;
-	margin: 100px 0;
-}
-
-#web_bg{
-	top: 0;
-	left: 0;
-	width:100%;
-	height:100%;
-	min-width: 10px;
-	z-index:-10;
-  }
-
-#head{
-	padding: 10px 0;
-	color: #218141;
-	border: 2px dashed rgb(12, 88, 46);
-	border-radius: 10px;
-}
-
-#head *{
-	display:inline-block;
-	vertical-align:middle;
-}
-
-
-#p1{
-   font-size: 20px;
-   padding-left: 50px;
-}
-
-#p2{
-	font-size:20px;
-	float: right;
-	line-height: 50px;
-}
-
-#p2 a:link{
-    color: rgb(10, 61, 30);
-}
-#p2 a:visited {
-    color: rgb(11, 68, 18)
-} /* 已访问的链接 */
-
-#p2 a:active {
-    color: #55996f;
-} /* [选定的链接 */
-
-/* 标题 */
-.tag-wrap {
-	filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-}
-
-.tag-wrap div {
-	margin-right: 10px;
-}
-
-.tag-wrap a {
-	text-decoration: none;
-	color: rgb(107, 168, 140);
-}
-
-.tag-wrap a:hover {
-	color: rgb(39, 109, 74);
-}
-
-.tag {
-	background: rgb(12, 92, 46);
-	color:rgb(255, 255, 255);
-	padding: 1.5rem 1.5rem 1.5rem 2rem;
-	font: bold 28px system-ui;
-	clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 30px 100%, 0 50%);
-	/* 创建一个只有元素的部分区域可以显示的剪切区域 */
-	text-align: center;
-	vertical-align: middle;
-}
-
-#i {
-	position: relative;
-	place-items: left;
-	margin: 0 auto;
-	padding-left: 30px;
-	padding-top: 100px;
-	text-align: left;
-	z-index: 0;
-}
-
-#ii {
-	top: 300px;
-	left: 300px;
-	display: grid;
-	place-items: left;
-	margin: 0 auto;
+body {
+	margin: 0;
 	padding: 0;
-	text-align: left;
-	height: 70px;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 
-/* 焦点图轮播 */
-#container {
-	width: 600px;
-	height: 400px;
-	border: 3px solid rgb(18, 109, 59);
-	overflow: hidden;
-	/*内容被修剪 其余内容不可见。*/
-	position: relative;
+.header-title {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	align-items: center;
+	height: 64px;
+	color: white;
 }
 
-#list {
-	width: 4200px;
-	height: 400px;
-	position: absolute;
-	z-index: 0;
-}
 
-#list img {
-	float: left;
-	width: 600px;
-	height: 400px;
+header {
+	background: linear-gradient(to right, rgb(19, 102, 51), rgb(145, 36, 9));	
 }
-
-#buttons {
-	position: absolute;
-	/* height: 10px;
-	width: 100px; */
-	z-index: 2;
-	bottom: 20px;
-	left: 250px;
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
 }
-
-#buttons span {
-	cursor: pointer;
-	float: left;
-	border: 1px solid rgb(255, 255, 255);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: #333;
-	margin-right: 5px;
+.container.column {
+	flex-direction: column;
 }
-
-#buttons .on {
-	background: rgb(13, 124, 72);
-}
-
-.arrow {
-	cursor: pointer;
-	/* 鼠标指上去变手 */
-	display: none;
-	text-decoration: none;
-	line-height: 39px;
-	text-align: center;
-	font-size: 36px;
-	font-weight: bold;
+.icon {
 	width: 40px;
 	height: 40px;
-	position: absolute;
-	z-index: 2;
-	top: 180px;
-	background-color: rgba(0, 0, 0, .3);
-	color: rgb(46, 146, 60);
 }
-
-.arrow:hover {
-	background-color: rgba(0, 0, 0, 0.7);
-	/* 箭头覆盖颜色变深 */
-}
-
-#container:hover .arrow {
-	display: block;
-	/* 箭头覆盖显示 */
-}
-
-#prev {
-	left: 20px;
-}
-
-#next {
-	right: 20px;
-}
-
-
-/* css3动画 */
-#move1,
-#move2,
-#move3 {
-	float: left;
-	position: absolute;
-}
-
-#move1 {
-	width: 100px;
-	height: 100px;
-	position: relative;
-	animation: mymove1 5s infinite;
-	color: white;
-	z-index: 0;
-}
-
-@keyframes mymove1 {
-
-	from,
-	0% {
-		left: 0px;
-		top: 0px;
-	}
-
-	25% {
-		left: 200px;
-		top: 0px;
-	}
-
-	50% {
-		left: 200px;
-		top: 200px;
-	}
-
-	75% {
-		left: 0px;
-		top: 200px;
-	}
-
-	to,
-	100% {
-		left: 0px;
-		top: 0px;
-	}
-
-}
-
-#move2 {
-	width: 100px;
-	height: 100px;
-	position: relative;
-	animation: mymove2 7s infinite;
-	color: white;
-	z-index: 1;
-}
-
-@keyframes mymove2 {
-
-	from,
-	0% {
-		left: 0px;
-		top: 0px;
-	}
-
-	25% {
-		left: 200px;
-		top: 0px;
-	}
-
-	50% {
-		left: 200px;
-		top: 200px;
-	}
-
-	75% {
-		left: 0px;
-		top: 200px;
-	}
-
-	to,
-	100% {
-		left: 0px;
-		top: 0px;
-	}
-
-}
-
-#move3 {
-	width: 100px;
-	height: 100px;
-	position: relative;
-	animation: mymove3 9s infinite;
-	color: white;
-	z-index: 3;
-}
-
-@keyframes mymove3 {
-
-	from,
-	0% {
-		left: 0px;
-		top: 0px;
-	}
-
-	25% {
-		left: 200px;
-		top: 0px;
-	}
-
-	50% {
-		left: 200px;
-		top: 200px;
-	}
-
-	75% {
-		left: 0px;
-		top: 200px;
-	}
-
-	to,
-	100% {
-		left: 0px;
-		top: 0px;
-	}
-
-}
-
-
-#move1,
-#move2,
-#move3:hover {
-	animation-play-state: paused;
-}
-
-/* 鼠标悬停超链接显示图片动画特效 */
-#content{	
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-#m {
-    text-align: center;
-}
-
-
-#m img {
-	width: 300px;
-	height: 200px;
-	cursor: pointer;
-	transition: all 0.6s;
-	-ms-transition: all 0.8s;
-	padding: 20px;
-}
-
-#m img:hover {
-	transform: scale(1.2);
-	-ms-transform: scale(1.2);
-}
-
-.show{
-	display: inline-block;
-	position: relative;
-	width: 300px;
-	margin-bottom: 10px;
-}
-
-#m a ,#p1 a{
-	color: rgb(4, 59, 17);
-	border-bottom: rgb(4, 59, 17);
+.container a{
+	color: rgb(255, 255, 255);
+	border-bottom: rgb(159, 197, 168);
 	text-decoration:none;
 }
-
-#m a, #p1 a:hover {
+.container a:hover {
 	color: rgb(56, 143, 60);
 	border-bottom: rgb(56, 143, 60);
 }
 
-
-
-
-
-/* bottom */
-#down {
-	margin-right: 10px;
-	
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	flex: 1;
 }
-#down ul{
-	list-style: none;
+.nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
-#down a {
-	text-decoration: none;
-	color: rgb(16, 95, 33);
+.nav ul li {
+	display: flex;
+	flex-direction: row;
+}
+.nav ul li a {
+	display: inline-block;
+	padding: 8px;
+	color:white;
 }
 
-#down a:hover {
-	color: rgb(76, 179, 127);
-}
 
-/* 底下 */
-.bottom {
-	padding: auto;
-	color: #8e8e8e;
+
+section ul {
 	text-align: center;
-	border: 2px dashed rgb(12, 116, 59);
-	border-radius: 10px;
+}
+.section-title {
+	text-align: center;
+	color: rgb(12, 88, 46);
+	padding-bottom:5px; 
+	border-bottom:3px dashed rgb(12, 88, 46);
 }
 
-.bottom img{
-	width: 150px;
-	height: 150px;
+.content {
+	display: flex;
+	flex-direction: row;
+	color: rgb(12, 88, 46);
+}
+.content img{
+	width: 270px;
+	height: 200px;
+	cursor: pointer;
+	transition: all 0.6s;
+	-ms-transition: all 0.8s;
+}
+.content img:hover {
+	transform: scale(1.2);
+	-ms-transform: scale(1.2);
+}
+.content ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.content li{
+	width: 30%;
+	height: 270px;
 }
 
-.b1{
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.b1 p{
-	font-size: 20px;
-	background: linear-gradient(to right, rgb(19, 102, 51), rgb(219, 206, 15));
-    -webkit-background-clip: text;
-    color: transparent;
-}
-.b1 *{
-	display:inline-block;
+
+footer{
+	background: linear-gradient(to right, rgb(19, 102, 51), rgb(145, 36, 9));
 	vertical-align:middle;
 }
-.b2{
-	border-top: 1px dashed;
-	color: rgb(47, 104, 47);
+footer img{
+	width: 200px;
+	height: 200px;
 }
+.left {
+	width: 50%;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 100px;
+	color:white;
+}
+.right {
+	text-align: center;
+	width: 50%;
+	padding: 20px;
+}
+.down{
+	border-top: 1px dashed;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
 

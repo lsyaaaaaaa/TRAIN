@@ -1,195 +1,59 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-		<title>梁梁</title>
-		<link type="text/css" rel="stylesheet" href="index.css" />
-		<script type="text/javascript" src="click.js"></script>
-		
-		<script type="text/javascript" src="html5shiv.js"></script>
-		<link rel="stylesheet" href="css/normalize.css" type="text/css" />
-		<script src="js/prefixfree.min.js"></script>
-	</head>
-	<body>
-		
-		<div class="big">
-		<div class="wrapper">
-		<div id="web_bg" style="background-image: url(img/back.jpeg);">
-		 
-	    <div id="header">
-		<div id="head">
-			<p id="p1">
-				<a href="index.html">
-				    <img src="img/icecream.png" style="width: 60px;height: 60px;">
-			        梁梁[○･｀Д´･ ○]
-			    </a>
-            </p>
-			<p id="p2">
-				<a href="#flower">
-					喜欢的花❀❀❀
-				</a>
-				<a href="#animal">
-					喜欢的动物
-				</a>
-				<a href="#bottom" title="扫下边二维码">
-					关注我
-				</a>
-				&nbsp;&nbsp;&nbsp;&nbsp;			
-			</p>           
-		</div>
-		</div>
-
-		<div id="i">
-			<span class="tag-wrap">
-				<span class="tag" title="(*╹▽╹*) ">
-					<a name="flower">
-						喜欢的花❀❀❀
-					</a>
-				</span>
-				<div align="right">
-					<a href="more.html">
-						更多
-					</a>
-				</div>
-			</span>
-			<div id="ii">
-
-			</div>
-			<div id="container">
-				<div id="list" style="left:0px;">
-					<!-- ! -->
-					<a href="https://baike.baidu.com/item/%E5%90%91%E6%97%A5%E8%91%B5/6106?fr=aladdin">
-						<img src="img/sunflower.jpg" alt="5" title="向日葵" />
-					</a >
-					<a href="https://baike.baidu.com/item/%E6%9C%A8%E6%A7%BF%E8%8A%B1/1778?fr=aladdin">
-						<img src="img/hibiscus.jpg" alt="1" title="木槿花" />
-					</a>
-					<a href="https://baike.baidu.com/item/%E6%A8%B1%E8%8A%B1/70387?fr=aladdin">
-						<img src="img/sakura.jpg" alt="2" title="樱花" />
-					</a>
-					<a href="https://baike.baidu.com/item/%E8%96%B0%E8%A1%A3%E8%8D%89/14513?fr=aladdin">
-						<img src="img/lavender.jpg" alt="3" title="薰衣草" />
-					</a>
-					<a href="https://baike.baidu.com/item/%E7%8E%AB%E7%91%B0/63206?fromtitle=%E7%8E%AB%E7%91%B0%E8%8A%B1&fromid=275439&fr=aladdin">
-					    <img src="img/rose.jpg" alt="4" title="玫瑰花" />
-					</a>
-					<a href="https://baike.baidu.com/item/%E5%90%91%E6%97%A5%E8%91%B5/6106?fr=aladdin">
-						<img src="img/sunflower.jpg" alt="5" title="向日葵" />
-					</a>
-					<a href="https://baike.baidu.com/item/%E6%9C%A8%E6%A7%BF%E8%8A%B1/1778?fr=aladdin">
-						<img src="img/hibiscus.jpg" alt="1" title="木槿花" /><!-- 第五张图之后返回第一张图 -->
-					</a>
-				</div>
-				<div id="buttons">
-					<!-- 小圆点 -->
-					<span index="1" class="on"></span>
-					<span index="2" class></span>
-					<span index="3" class></span>
-					<span index="4" class></span>
-					<span index="5" class></span>
-				</div>
-				<a href="javascript:;" id="prev" class="arrow">&lt;</a>
-				<a href="javascript:;" id="next" class="arrow">&gt;</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梁梁</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-title">
+                <img src="img/icecream.png" alt="logo" class="icon">
+                <span><a href="index.html">梁梁[○･｀Д´･ ○]</a></span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#flower">喜欢的花❀❀❀</a></li>
+                    <li><a href="#animal">喜欢的动物</a></li>
+                    <li><a href="#bottom">关注我</a></li>
+                </ul>
+			</nav>
+        </div>
+    </header>
+    <section id="section">
+        <div class="container column">
+            <h2 class="section-title" style="text-align: center;" id="flower">喜欢的花❀❀❀</h2>
+            <ul class="content">
+                <li><img src="img/sunflower.jpg" alt="sunflower" ><h4>向日葵</h4></li>
+                <li><img src="img/sakura.jpg" alt="sakura" ><h4>木槿花</h4></li>
+                <li><img src="img/hibiscus.jpg" alt="hibiscus" ><h4>樱花</h4></li>
+                <li><img src="img/rose.jpg" alt="rose" ><h4>玫瑰花</h4></li>
+            </ul>
+        </div>
+        <div class="container column">
+            <h2 class="section-title" style="text-align: center;" id="animal">喜欢的动物</h2>
+            <ul class="content">
+                <li><img src="img/dog.jpg" alt="dog" ><h4>狗</h4></li>
+                <li><img src="img/cat.jpeg" alt="cat" ><h4>猫(>^ω^<)</h4></li>
+                <li><img src="img/fish.jpg" alt="fish" ><h4>鱼<・)))><<></h4></li>
+                <li><img src="img/panda.jpg" alt="panda" ><h4>熊(●￣(ｴ)￣●)</h4></li>
+            </ul>
+        </div>
+    </section>
+    <footer id="bottom">
+        <div class="container">
+            <div class="left">
+                现在有点讨厌自己了,尽管我再怎么努力,也只是别人眼中的美女。
+            </div>
+            <div class="right" >
+                <img src="img/pick.jpg" alt="pink" style="width: 40%">
 			</div>
 		</div>
-
-		<div id="i">
-			<span class="tag-wrap">
-				<span class="tag" title="你能看到我吗(*╹▽╹*) ">
-					<a name="animal">
-						喜欢的动物(〃'▽'〃)
-					</a>					
-				</span>
-				<div align="right">
-					<a href="more.html">
-						更多
-					</a>
-				</div>
-			</span>
-			<div id="ii">
-
-			</div>
-			<div id="content">
-			<div id="m">
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E7%8B%97/85474?fr=aladdin">
-						<img src="img/dog.jpg" />
-						<p>狗</p>
-					</a>
-				</div>
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E7%8C%AB/22261">
-						<img src="img/cat.jpeg" />
-						<p>猫(=^ω^=)</p>
-					</a>
-				</div>
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E4%BB%93%E9%BC%A0%E4%BA%9A%E7%A7%91/650631?fromtitle=%E4%BB%93%E9%BC%A0&fromid=8363">
-						<img src="img/mouse.jpg" />
-						<p>仓鼠</p>
-					</a>
-				</div>
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E7%8C%AA/147315">
-						<img src="img/pig.jpg" />
-						<p>猪^(*￣(oo)￣)^</p>
-					</a>
-				</div>
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E9%B8%9F/13205537">
-						<img src="img/bird.jpg" />
-						<p>鸟</p>
-					</a>
-				</div>
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E5%85%94/522910?fromtitle=%E5%85%94%E5%AD%90&fromid=166132&fr=aladdin">
-						<img src="img/rabbit.jpg" />
-						<p>=(:з」∠)_兔子</p>
-					</a>
-				</div>
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E9%B1%BC/221">
-						<img src="img/fish.jpg" />
-						<p>鱼<・)))><<</p>
-					</a>
-				</div>
-				<div class="show">
-					<a href="https://baike.baidu.com/item/%E5%A4%A7%E7%86%8A%E7%8C%AB/34935?fromtitle=%E7%86%8A%E7%8C%AB&fromid=162918">
-						<img src="img/panda.jpg" />
-						<p>熊猫(●￣(ｴ)￣●)</p>
-					</a>
-				</div>
-			</div>
-		    </div>
+		<div class="down">				
+			版权所有 &copy;  梁梁
 		</div>
-
-		<div id="down">
-			<ul align="right">
-				<li>
-					<a href="#flower">
-						返回顶部
-					</a>
-				</li>
-			</ul>
-		</div>
-
-
-		<div id="ii">
-
-		</div>
-		<div class="bottom">
-			<div class="b1">
-				<p>现在有点讨厌自己了,尽管我再怎么努力,也只是别人眼中的美女。</p>
-				<a name="bottom">
-					<img src="img/pick.jpg">
-				</a>				
-			</div>
-			<div class="b2">				
-				版权所有 &copy;  梁梁
-			</div>
-		</div>
-	</div>
-	</div>
-	</body>
+    </footer>
+</body>
 </html>
