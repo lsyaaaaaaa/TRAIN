@@ -38,18 +38,20 @@ function createScreenbullet(text) {
     var jqueryDom = $("<div class='bullet'>" + text + "</div>");
     var fontColor = getRandomColor();
     var fontSize = Math.floor((Math.random() + 1) * 24) + "px";
-    var left = $(".container").width() + "px";
+    var right = $(".container").width() + "px";
     var top = Math.floor(Math.random() * 550) + "px";
     top = parseInt(top) > 552 ? "552px" : top;
     jqueryDom.css({
         "position": 'absolute',
         "color": fontColor,
         "font-size": fontSize,
-        "left": left,
+        "right": right,
         "top": top,
-        "white-space": 'nowrap'
+        "whiteSpace": 'nowrap',
+        "display": 'block' 
     });
     $(".container").append(jqueryDom);
+    $("#screenBulletText").val("");
     return jqueryDom;
 }
 
@@ -61,13 +63,16 @@ function getRandomColor(){
     )((Math.random() * 0x1000000 << 0).toString(16))    
 }
 
+
 // 为弹幕添加定时任务
 function addInterval(jqueryDom) {
-    var left = jqueryDom.offset().left - $(".container").offset().left;
+    var i = 0;
+    var speed = Math.floor(Math.random() * 6) + 1;
+    var right = jqueryDom.offset().right - $(".container").offset().right;
     var timer = setInterval(function () {
-        left--;
-        jqueryDom.css("left", left + "px");
-        if (jqueryDom.offset().left + jqueryDom.width() < $(".container").offset().left) {
+        right--;
+        jqueryDom.css("right", (i += speed) + "px");
+        if (jqueryDom.offset().right + jqueryDom.width() < $(".container").offset().right) {
             jqueryDom.remove();
             clearInterval(timer);
         }
