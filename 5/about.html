@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们</title>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="./images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/base.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=LQmvwYIjMy3lS4SrYcqG24TCDFNzjG9s&s=1"></script>
+</head>
+
+<body>
+    <div class="container-fruit">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="navbar navbar-expand-sm bg-warning navbar-dark fixed-top">
+                    <a class="navbar-brand" href="#"><img src="./images/hamburger.png" alt="logo" class="icon">SpongeBob SquarePants 海绵宝宝</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./news.html">新闻</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <!-- 指示符 轮播（Carousel）指标 -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                        <li data-target="#demo" data-slide-to="4"></li>
+                    </ul>
+                    <!-- 轮播图片 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/2.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/3.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/4.jpg" alt="Forth slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/5.jpg" alt="Fifth slide">
+                        </div>
+                    </div>
+                    <!-- 左右切换按钮 轮播（Carousel）导航 -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div><br>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <h2 style="color: rgb(39, 139, 197);">关于我们</h2>
+                    <hr><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <div class="map" id="dituContent"></div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <p>
+                        海绵宝宝是方块形的黄色海绵，住在比基尼海滩（裤头村、比奇堡）的一个菠萝里，
+                        他的宠物是一只会“猫~猫~”叫的海蜗牛小蜗，海绵宝宝喜欢捕捉水母，
+                        职业是蟹堡王（The Krusty Krab）里的头号厨师。派大星和姗迪都是他的朋友。
+                        海绵宝宝总是能给平静的世界制造麻烦，虽然闹出一些笑话，不过他总能摆脱困境，然后又制造出新的麻烦。
+                    </p><br>
+                    <div class="message" style="color: rgb(49, 163, 197);">
+                        <img src="./images/xx.png" alt="xx" class="logo">                       
+                           学校：闽江学院
+                        <br><br>
+                        <img src="./images/xz.png" alt="xz" class="logo">
+                            校长：王宗华
+                        <br><br>
+                        <img src="./images/yb.png" alt="yb" class="logo">
+                            邮编：350108
+                        <br><br>
+                        <img src="./images/dz.png" alt="dz" class="logo">
+                            地址：福州市大学城溪源宫路200号
+                        
+                        <br>
+                    </div>
+                </div>
+            </div><br><hr>
+        </div><br>
+        <div class="container-fruit bg-warning">
+            <div class="row">
+                <div class="col-12" style="padding: 0;">
+                    <div class="jumbotron bg-warning">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                                <a class="nav-link" href="./about.html">
+                                <img src="./images/dd.png" alt="dd" class="footer-img">
+                                <h5 class="text-white font-weight-light">地理位置</h5></a>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                                <img src="./images/yj.png" alt="yj" class="footer-img">
+                                <h5 class="text-white font-weight-light">邮件</h5>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                                <img src="./images/kf.png" alt="kf" class="footer-img">
+                                <h5 class="text-white font-weight-light">客服</h5>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                                <img src="./images/pick.jpg" alt="kf" class="footer-img">
+                                <h5 class="text-white font-weight-light">联系方式</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+    </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+        }
+
+        //创建地图函数：
+        function createMap() {
+            var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+            var point = new BMap.Point(119.176895, 26.072713);//定义一个中心点坐标
+            map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
+            window.map = map;//将map变量存储在全局
+        }
+
+        //地图事件设置函数：
+        function setMapEvent() {
+            map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+            map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard();//启用键盘上下左右键移动地图
+        }
+
+        //地图控件添加函数：
+        function addMapControl() {
+            //向地图中添加缩放控件
+            var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+            var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+            map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+            var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            map.addControl(ctrl_sca);
+        }
+        initMap();//创建和初始化地图
+    </script>
+</body>
+
+</html>
